@@ -11,5 +11,5 @@ submitButton.addEventListener("click", function () {
 
 for (let i = 0; i < myNote.length; i++) {
   console.log(myNote[i]);
-  noteList.innerText += myNote[i] + "";
+  noteList.innerHTML += "<li>" + myNote[i] + "</li>";
 }
