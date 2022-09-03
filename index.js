@@ -6,10 +6,14 @@ const noteList = document.getElementById("note-list");
 submitButton.addEventListener("click", function () {
   var input = document.getElementById("input-el").value;
   myNote.push(input);
-  alert(myNote);
+  // alert(myNote);
+  saveNote();
 });
 
-for (let i = 0; i < myNote.length; i++) {
-  console.log(myNote[i]);
-  noteList.innerHTML += "<li>" + myNote[i] + "</li>";
+function saveNote() {
+  let listItems = "";
+  for (let i = 0; i < myNote.length; i++) {
+    listItems += "<li>" + myNote[i] + "</li>";
+  }
+  noteList.innerHTML = listItems;
 }
