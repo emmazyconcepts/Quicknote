@@ -12,7 +12,11 @@ submitButton.addEventListener("click", function () {
 function saveNote() {
   let listItems = "";
   for (let i = 0; i < myNote.length; i++) {
-    listItems += "<li>" + myNote[i] + "</li>";
+    listItems += `<li>
+    <a target="_blank" href="${myNote[i]}">
+    ${myNote[i]}
+    </a>
+    </li>`;
   }
   noteList.innerHTML = listItems;
 }
