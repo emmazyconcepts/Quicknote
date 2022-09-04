@@ -3,6 +3,7 @@ const input = document.getElementById("input-el");
 const submitButton = document.getElementById("input-btn");
 const noteList = document.getElementById("note-list");
 
+let noteLocalstorage = JSON.parse(localStorage.getItem("myNote"));
 submitButton.addEventListener("click", function () {
   myNote.push(input.value);
   input.value = "";
