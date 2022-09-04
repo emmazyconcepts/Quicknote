@@ -1,12 +1,11 @@
-let myNote = ["asss", "assss", "ssss"];
-var input = document.getElementById("input-el").value;
-let submitButton = document.getElementById("input-btn");
+let myNote = [];
+const input = document.getElementById("input-el");
+const submitButton = document.getElementById("input-btn");
 const noteList = document.getElementById("note-list");
 
 submitButton.addEventListener("click", function () {
-  var input = document.getElementById("input-el").value;
-  myNote.push(input);
-  // alert(myNote);
+  myNote.push(input.value);
+  input.value = "";
   saveNote();
 });
 
