@@ -6,7 +6,9 @@ const noteList = document.getElementById("note-list");
 submitButton.addEventListener("click", function () {
   myNote.push(input.value);
   input.value = "";
+  localStorage.setItem("myNote", JSON.stringify(myNote));
   saveNote();
+  console.log(localStorage.getItem("myNote"));
 });
 
 function saveNote() {
