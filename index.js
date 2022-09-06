@@ -14,7 +14,10 @@ if (noteLocalstorage) {
 const tabs = [{ url: "https://www.linkedin.com/in/per-harald-borgen/" }];
 
 tabBtn.addEventListener("click", function () {
-  console.log(tabs);
+  console.log(tabs[0].url);
+  myNote.push(tabs[0].url);
+  localStorage.setItem("myNote", JSON.stringify(myNote));
+  render(myNote);
 });
 
 deleteBtn.addEventListener("dblclick", function () {
